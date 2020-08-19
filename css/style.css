@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+html{
+    font-size:62.5%;
+    font-family:"Open Sans",sans-serif;
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+.wrapper{
+    height:100vh;
+    width:100vw;
+    animation-duration:0.5s;
+    animation-name:opacityFade;
+    z-index:1;
+}
+
+.bg-img{
+    position:absolute;
+    top:0;
+    left:0;
+    filter:blur(2px);
+    z-index:0;
+    background-image:url(../assets/bg.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    height:100vh;
+    width:100vw;
+}
+
+@keyframes opacityFade{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+main{
+    position:absolute;
+    top:50vh;
+    left:50vw;
+    transform:translate(-50%,-50%);
+    border-radius:10px;
+    padding:2rem;
+    height:80vh;
+    width:70vw;
+    /* background-color:rgba(226, 226, 226, 0.945); */
+    background-color:rgba(226, 226, 226, 0.897);
+    display:flex;
+    filter:drop-shadow(0.3rem 0.3rem 10px black);
+}
+
+h1{
+    font-size:3.5rem;
+}
+
+h2{
+    font-size:2rem;
+}
+
+h3{
+    font-size:3rem;
+}
+
+p{
+    font-size:1.5rem;
+}
+
+.headshot-img{
+    width:100%;
+    height:auto;
+    filter:drop-shadow(0.01rem 0.01rem 5px grey);
+}
+
+.intro-container{
+    display:flex;
+    flex-direction:column;
+    width:25%;
+    height:100%;
+}
+
+.socials{
+    display:flex;
+    justify-content:space-evenly;
+    margin-top:auto;
+}
+
+.socials li a{
+    text-decoration:none;
+    color:black;
+    font-size:3rem;
+    transition:color 150ms;
+    padding:1rem;
+}
+
+.socials li a:hover{
+    color:dodgerblue;
+}
+
+.socials li{
+    display:inline-block;
+    list-style-type:none;
+    text-align:center;
+}
+
+.qualities-container{
+    width:75%;
+    margin-left:1rem;
+}
+
+.expertise-container{
+    height:50%;
+}
+
+.skills-container{
+   height:50%;
+}
+
+footer{
+    text-align:center;
+    background-color:rgba(255, 255, 255, 0.671);
+    position:absolute;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    border-radius:5px;
+    padding:0 6rem;
+    display:block;
+}
